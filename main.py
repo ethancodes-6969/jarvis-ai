@@ -1,4 +1,5 @@
 from core.speech import listen, speak
+from brain.processor import process_command
 
 if __name__ == "__main__":
     speak("Welcome Krish, I am AVA. How can I assist you?")
@@ -11,6 +12,7 @@ if __name__ == "__main__":
                     speak("Shutting down. Goodbye!")
                     break
                 else:
-                    speak(f"You said: {command}")
+                    response = process_command(command)
+                    speak(response)
     except KeyboardInterrupt:
         speak("Manual shutdown initiated. Goodbye!")
