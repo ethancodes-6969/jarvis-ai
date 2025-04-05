@@ -122,4 +122,4 @@ def process_command(command: str) -> str:
         return "Opening Google for you"
     
     # Default response
-    return "I'm not sure how to help with that yet"
+    return "I'm not sure how to help with that yet. (I am still being developed)"
